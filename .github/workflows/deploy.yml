@@ -1,0 +1,25 @@
+name: Deploy Landing Page
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+
+jobs:
+  deploy:
+    env:
+      DEPLOYMENT_DIR: /etc/nginx/html/landing-page
+
+    runs-on: self-hosted
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+
+    - name: Copy files to NGINX
+      run: |
+        rm -r  $DEPLOYMENT_DIR || true
+        mkdir -p $DEPLOYMENT_DIR
+        cp -r src/* $DEPLOYMENT_DIR
+        sudo systemctl reload nginx
