@@ -6,6 +6,8 @@ body {
 .linkbuttons {
     display: flex;
     flex-direction: column;
+    margin-left: 30px;
+    margin-right: 30px;
 }
 
 .linkbutton {
@@ -16,12 +18,13 @@ body {
 
 .title {
     text-align: center;
-    font-size: 40px;
+    font-size: 80px;
 }
 
 .divider {
     margin-top: 30px;
     margin-bottom: 30px;
+    border-bottom: 5px solid #FFFFFF;
 }
 
 
