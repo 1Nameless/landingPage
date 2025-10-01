@@ -8,7 +8,36 @@
 <body>
     
     <div class="blogentry">
-    <h1 class="red"> About Infoscreen </h1>
+    <h1 class="red"> About Infobean </h1>
+    <img src="bean_hauptbahnhof.png" alt="departures from Nürnberg Hauptbahnhof" height="500"/>
+    <p>
+        The Infobean shows departures of any one, or even multiple, stations in Nürnberg.
+        It can be configured with a config file passed to the program at startup
+    </p>
+
+    <h2>The Config</h2>
+    <p>
+        A config file is a  text file in yaml format.
+        <p>
+            It currently expects two things:
+        </p>
+        <ul>
+            <li> a title to display at the top of the departures </li>
+            <li> a list VGN station codes </li>
+        </ul>
+
+
+        The title is passed with the key "TABLE_TITLE".
+        The Stations use the key "VGN_STATION_CODE" and are passed as a list. Because you probably don't know the code of the stations you want to use,
+        the easiest way to get it is <a href="https://start.vag.de/dm/swagger/ui/index#!/Haltestellen/Haltestellen_GetByName" target="_blank">the API endpoint /haltestellen/VGN directly on swagger.</a>
+    </p>
+
+    <h2>The Font</h2>
+    <p>
+        because using a basic font like Arial or Times New Roman for a display like this is a little boring,
+        we got the idea to copy the font from the departure displays commonly found on Tram stations
+        
+    </p>
 
 
     </div>
